@@ -28,9 +28,8 @@ class newrelic_riak_agent::install (
     ensure  => 'present',
     source  => $agentscript_src,
     require => File[$installdir],
-    }
   }
-  
+
   file { $initscript :
     ensure  => 'present',
     mode    => '0755',
