@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'bundler/setup'
 require 'newrelic_plugin'
 require 'rest-client'
 require 'json'
