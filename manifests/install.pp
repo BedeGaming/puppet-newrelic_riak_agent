@@ -11,6 +11,7 @@ class newrelic_riak_agent::install (
 
   file { "${installdir}/riak_agent.rb":
     ensure  => 'present',
+    mode    => '0755',
     source  => $agentscript_src,
     require => File[$installdir],
   }
