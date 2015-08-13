@@ -3,6 +3,7 @@ class newrelic_riak_agent::params {
   case $::osfamily {
     'redhat': {
       $license_key    = undef
+      $port           = 8098
       $conf_template  = 'newrelic_riak_agent/newrelic_plugin.yml.erb'
       $plugin_source  = 'newrelic_riak_agent/riak_agent.rb'
       $installdir     = '/opt/newrelic-riak-agent'

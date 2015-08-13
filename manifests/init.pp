@@ -1,5 +1,6 @@
 class newrelic_riak_agent (
   $license_key    = $newrelic_riak_agent::params::license_key,
+  $port           = $newrelic_riak_agent::params::port,
   $conf_template  = $newrelic_riak_agent::params::conf_template,
   $plugin_source  = $newrelic_riak_agent::params::plugin_source,
   $installdir     = $newrelic_riak_agent::params::installdir,
