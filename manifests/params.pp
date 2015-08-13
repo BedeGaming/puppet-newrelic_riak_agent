@@ -12,7 +12,7 @@ class newrelic_riak_agent::params {
       $service_enable  = true
       $initscript      = '/etc/systemd/system/newrelic-riak-agent.service'
       $initscript_src  = 'puppet:///modules/newrelic_riak_agent/newrelic-riak-agent.service'
-      $agentscript_src = 'puppet:///modules/newrelic_riak_agent/riak-agent.rb'
+      $agentscript_src = 'puppet:///modules/newrelic_riak_agent/riak_agent.rb'
     }
 
     default: {
