@@ -6,7 +6,7 @@ class newrelic_riak_agent::params {
       $conf_template  = 'newrelic_riak_agent/newrelic_plugin.yml.erb'
       $plugin_source  = 'newrelic_riak_agent/riak_agent.rb'
       $installdir     = '/opt/newrelic-riak-agent'
-      $loglevel       = 0
+      $verbose_output = 0
       $service_ensure = 'running'
       $service_enable = true
       $initscript     = '/etc/systemd/system/newrelic-riak-agent.service'

@@ -3,7 +3,7 @@ class newrelic_riak_agent (
   $conf_template  = $newrelic_riak_agent::params::conf_template,
   $plugin_source  = $newrelic_riak_agent::params::plugin_source,
   $installdir     = $newrelic_riak_agent::params::installdir,
-  $loglevel       = $newrelic_riak_agent::params::loglevel,
+  $verbose_output = $newrelic_riak_agent::params::verbose_output,
   $service_ensure = $newrelic_riak_agent::params::service_ensure,
   $service_enable = $newrelic_riak_agent::params::service_enable,
   $initscript     = $newrelic_riak_agent::params::initscript,
