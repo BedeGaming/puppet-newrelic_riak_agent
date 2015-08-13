@@ -1,0 +1,12 @@
+[Unit]
+Description=newrelic-riak-agent
+
+[Service]
+Type=forking
+User=newrelic
+PIDFile=/var/run/newrelic/newrelic-riak-agent.pid
+ExecStart=/opt/newrelic-riak-agent/riak_agent.rb
+ExecStop=/bin/kill -INT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

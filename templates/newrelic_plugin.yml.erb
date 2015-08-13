@@ -1,0 +1,11 @@
+
+newrelic:
+  license_key: '<%= scope['::newrelic_riak_agent::license_key'] %>'
+  verbose: <%= scope['::newrelic_riak_agent::loglevel'] %>
+
+agents:
+  riak:
+    host: <%= scope['::ipaddress'] %>
+    port: <%= scope['::newrelic_riak_agent::port'] %>
+    nodename: 'riak@<%= scope['::hostname'] %>'
+    hostname: '<%= scope['::hostname'] %>'
