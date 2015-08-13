@@ -5,21 +5,6 @@ class newrelic_riak_agent::install (
   $agentscript_src = $newrelic_riak_agent::agentscript_src,
 ) {
 
-  package { 'newrelic_plugin':
-    ensure   => installed,
-    provider => 'gem',
-  }
-
-  package { 'rest-client':
-    ensure   => installed,
-    provider => 'gem',
-  }
-
-  package { 'json':
-    ensure   => installed,
-    provider => 'gem',
-  }
-
   file { [$installdir, "${installdir}/config"]:
     ensure  => 'directory',
   }
