@@ -9,7 +9,7 @@ class newrelic_riak_agent::params {
       $loglevel       = 0
       $service_ensure = 'running'
       $service_enable = true
-      $initscript     = '/etc/systemd/system/newrelic-plugin-agent.service'
+      $initscript     = '/etc/systemd/system/newrelic-riak-agent.service'
       $initscript_src = 'puppet:///modules/newrelic_riak_agent/newrelic-riak-agent.service'
     }
 
