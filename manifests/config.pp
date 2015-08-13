@@ -7,8 +7,8 @@ class newrelic_riak_agent::config (
 
   file { "${installdir}/config/newrelic_plugin.yml":
     ensure  => file,
-    content => template($conf_template)
+    content => template($conf_template),
     mode    => '0644',
-    require => File["${installdir}/config"]
+    require => File["${installdir}/config"],
   }
 }
