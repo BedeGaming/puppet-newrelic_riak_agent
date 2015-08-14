@@ -1,8 +1,8 @@
 class newrelic_riak_agent::install (
   $installdir      = $newrelic_riak_agent::installdir,
   $initscript      = $newrelic_riak_agent::initscript,
+  $plugin_source   = $newrelic_riak_agent::plugin_source,
   $initscript_src  = $newrelic_riak_agent::initscript_src,
-  $agentscript_src = $newrelic_riak_agent::agentscript_src,
 ) {
 
   file { [$installdir, "${installdir}/config"]:
@@ -12,7 +12,7 @@ class newrelic_riak_agent::install (
   file { "${installdir}/riak_agent.rb":
     ensure  => 'present',
     mode    => '0755',
-    source  => $agentscript_src,
+    content => template($plugin_source),
     require => File[$installdir],
   }
 

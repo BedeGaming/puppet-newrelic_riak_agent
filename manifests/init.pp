@@ -1,5 +1,6 @@
 class newrelic_riak_agent (
   $license_key     = $newrelic_riak_agent::params::license_key,
+  $agent_guid      = $newrelic_riak_agent::params::agent_guid,
   $port            = $newrelic_riak_agent::params::port,
   $conf_template   = $newrelic_riak_agent::params::conf_template,
   $plugin_source   = $newrelic_riak_agent::params::plugin_source,
@@ -9,7 +10,6 @@ class newrelic_riak_agent (
   $service_enable  = $newrelic_riak_agent::params::service_enable,
   $initscript      = $newrelic_riak_agent::params::initscript,
   $initscript_src  = $newrelic_riak_agent::params::initscript_src,
-  $agentscript_src = $newrelic_riak_agent::params::agentscript_src,
 ) inherits newrelic_riak_agent::params {
 
   class { 'newrelic_riak_agent::install': } ->
